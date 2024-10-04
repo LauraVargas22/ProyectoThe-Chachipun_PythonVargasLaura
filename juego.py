@@ -7,6 +7,8 @@ if (__name__=='__main__'):
     import modules.customs as c
     import modules.menu as m
     import modules.titles as t
+    import modules.mensajes as msg
+    import modules.salir as s
 
 
     isActive = True
@@ -19,12 +21,61 @@ if (__name__=='__main__'):
 
             match opcMenuP:
                 case 1:
-                    pass
+                    print (t.subtitle1)
+                    isPlayUno = True
+                    while (isPlayUno):
+                        try:
+                            c.borrarPantalla()
+                            print (m.menu1a)
+                            opcMenu1a = int(input('Seleccione:_'))
+                        except ValueError:
+                            print (msg.msgExcept)
+                            c.pausarPantalla()
+                            continue
+                        else:
+                            match opcMenu1a:
+                                case 1:
+                                    pass
+                                case 2:
+                                    pass
+                                case 3:
+                                    pass
+                                case 4:
+                                    isPlayUno =s.validateData(msg.msgRegresar)
+                                case _:
+                                    print (msg.msgCase)
+                                    c.pausarPantalla()
                 case 2:
-                    pass
+                    print (t.subtitle2)
+                    isPlayMaquina = True
+                    while (isPlayMaquina):
+                        try:
+                            c.pausarPantalla()
+                            print (m.menu2a)
+                            opcMenu2a= int(input('Seleccione:_'))
+                        except ValueError:
+                            print (msg.msgExcept)
+                            c.pausarPantalla()
+                            continue
+                        else: 
+                            match opcMenu2a:
+                                case 1:
+                                    pass
+                                case 2:
+                                    pass
+                                case 3:
+                                    pass
+                                case 4:
+                                    isPlayMaquina = s.validateData(msg.msgRegresar)
+                                case _:
+                                    print (msg.msgCase)
+                                    c.pausarPantalla()
                 case 3:
-                    pass
+                    isActive = s.validateData(msg.msgInfo)
                 case _:
-                    pass
+                    print (m.msgCase)
+                    c.pausarPantalla()
         except ValueError:
-            pass
+            print (msg.msgExcept)
+            c.pausarPantalla()
+            continue
