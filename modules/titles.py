@@ -9,8 +9,11 @@ title1 = """
 *****************************************            
 """
 subtitle1 = """
-***** UNO VERSUS UNO *****
+***** REGISTRARSE *****
 """
 subtitle2 = """
+***** UNO VERSUS UNO *****
+"""
+subtitle3 = """
 ***** UNO VERSUS MÁQUINA *****
 """
