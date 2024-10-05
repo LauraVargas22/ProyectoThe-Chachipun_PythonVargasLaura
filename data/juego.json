@@ -1,14 +1,12 @@
 {
-    "Laura Mariana Vargas": {
-        "Nombre": "Laura Mariana Vargas",
-        "Nickname": "lau2209"
+    "Laura Mariana Vargas Rojas": {
+        "Nombre": "Laura Mariana Vargas Rojas",
+        "Nickname": "lau2209",
+        "Puntos": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
     },
-    "Pedro Alejandro Sierra": {
-        "Nombre": "Pedro Alejandro Sierra",
-        "Nickname": "alejo0503"
-    },
-    "M\u00f3nica Rojas": {
-        "Nombre": "M\u00f3nica Rojas",
-        "Nickname": "moni3010"
-    }
+    "lau2209": "Laura Mariana Vargas Rojas"
 }

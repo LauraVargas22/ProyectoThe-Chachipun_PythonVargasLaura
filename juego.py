@@ -12,7 +12,7 @@ if (__name__=='__main__'):
     import modules.mensajes as msg
     import modules.salir as s
     import modules.registrarse as re
-
+    import modules.unovsmaquina as ia
     isActive = True
     while (isActive):
         try:
@@ -46,7 +46,7 @@ if (__name__=='__main__'):
                                     c.pausarPantalla()
                                 case 2:
                                     print (t.subtitle3)
-                                    #uno versus maquina
+                                    ia.UnoVersusMaquina(JUEGO_BASE)
                                     c.pausarPantalla()
                                 case 3:
                                     isPlay = s.validateData(msg.msgInfo)
