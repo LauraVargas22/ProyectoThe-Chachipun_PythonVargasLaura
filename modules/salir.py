@@ -16,14 +16,14 @@ def validateData (message:str):
         flagFunction = False
     return flagFunction
 
-def validateAnswer (message: str):
+def validateAnswer (message:str):
     global isAllow
     flagFunction = True
     opciones = ('N', 'S')
     accion = input (f'{message}').upper()
     if (accion not in opciones):
         print ('La opción ingresada no es válida...')
-        validateData()
+        validateAnswer()
     elif(accion == 'N'):
         flagFunction = False
     elif ((accion)== 'S'):

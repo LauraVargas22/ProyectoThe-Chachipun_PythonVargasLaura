@@ -4,12 +4,14 @@ By Mariana Vargas
 '''
 if (__name__=='__main__'):
 
+    JUEGO_BASE = 'data/juego.json'
+
     import modules.customs as c
     import modules.menu as m
     import modules.titles as t
     import modules.mensajes as msg
     import modules.salir as s
-
+    import modules.registrarse as re
 
     isActive = True
     while (isActive):
@@ -21,8 +23,9 @@ if (__name__=='__main__'):
 
             match opcMenuP:
                 case 1:
-                    print (t.subtitle1)
-                
+                    print (t.subtitle1) #Registrarse
+                    re.addJugadores (JUEGO_BASE)
+                    c.pausarPantalla()
                 case 2:
                     print (t.subtitle2)
                     isPlay = True
@@ -38,15 +41,21 @@ if (__name__=='__main__'):
                         else:
                             match opcMenu2:
                                 case 1:
-                                    pass
+                                    print (t.subtitle2)
+                                    #Uno versus uno
+                                    c.pausarPantalla()
                                 case 2:
-                                    pass
+                                    print (t.subtitle3)
+                                    #uno versus maquina
+                                    c.pausarPantalla()
                                 case 3:
                                     isPlay = s.validateData(msg.msgInfo)
                                 case _:
                                     print (msg.msgCase)
                                     c.pausarPantalla()
                 case 3:
+                    pass #Estadísticas
+                case 4:
                     isActive = s.validateData(msg.msgInfo)
                 case _:
                     print (msg.msgCase)

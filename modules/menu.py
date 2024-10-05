@@ -6,7 +6,8 @@ menu1 = """
 ***** MENU PRINCIPAL *****
 1. Registrarse
 2. Jugar
-3. Salir
+3. Ranking Juego
+4. Salir
 """
 menu2 = """
 ***** MODO DE JUEGO *****
