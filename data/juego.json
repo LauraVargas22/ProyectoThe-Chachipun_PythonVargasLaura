@@ -2,8 +2,8 @@
     "Laura Vargas": {
         "Nombre": "Laura Vargas",
         "Nickname": "",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
+        "Puntos Usuario": 16,
+        "Partida Ganada IA": 2,
         "Partida Perdida IA": 1
     },
     "lau2209": "Laura Vargas",
@@ -12,12 +12,5 @@
             "Laura Vargas"
         ],
         "Puntos IA": 6
-    },
-    "jugador": {
-        "Nombre": "Laura Vargas",
-        "Nickname": "",
-        "Puntos Usuario": 6,
-        "Partida Ganada IA": 1,
-        "Partida Perdida IA": 1
     }
 }

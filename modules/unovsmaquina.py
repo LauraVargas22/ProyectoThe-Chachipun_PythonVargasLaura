@@ -67,7 +67,7 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                         print (f'{nomJugador} ha GANADO el juego')
                         partidaGanadaIA += 1
                         jugador['Partida Ganada IA'] = partidaGanadaIA
-                        juego['jugador'] = jugador
+                        juego[nomJugador] = jugador
                         guardarJuego (juego,JUEGO_BASE)
                         c.pausarPantalla()
                         break
@@ -83,12 +83,14 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                         print ("La maquina ha GANADO el juego")
                         partidaPerdidaIA += 1
                         jugador["Partida Perdida IA"] = partidaPerdidaIA
-                        maquina['Jugadores Perdieron'].append(nomJugador)
-                        
+                        if nomJugador not in maquina["Jugadores Perdieron"]:
+                            maquina['Jugadores Perdieron'].append(nomJugador)
+                            print (f'El jugador {nomJugador} ha PERDIDO') 
+                        else:
+                            print (f'{nomJugador}, la máquina le ha ganado nuevamente')
+
                         juego[nomJugador] = jugador
                         juego['maquina'] = maquina
-
-                        print (f'El jugador {nomJugador} ha PERDIDO')
                         guardarJuego (juego,JUEGO_BASE)
                         c.pausarPantalla()
                         break
