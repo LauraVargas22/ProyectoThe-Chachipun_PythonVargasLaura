@@ -37,7 +37,7 @@ def addJugadores (JUEGO_BASE: str):
             jugador = {
                 'Nombre': nomJugador,
                 'Nickname': nickname,
-                'Puntos': 0,
+                'Puntos Usuario': 0,
                 'Partida Ganada IA': 0,
                 'Partida Perdida IA': 0,
                 'Partida Ganada Uno': 0,

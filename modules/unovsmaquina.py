@@ -22,29 +22,32 @@ def UnoVersusMaquina (JUEGO_BASE:str):
     juego = cargarJuego(JUEGO_BASE)
     print ('Sr.Jugador usted se enfrentará a nuestra maquina')
     nomJugador = input("Sr. Jugador, ingrese su nombre: ").title()
+    c.borrarPantalla()
     if (nomJugador not in juego):
         print (f"El jugador {nomJugador} ingresado no ha sido registrado")
+        c.borrarPantalla()
     else:
         rondaGanadaUser = 0
         rondaGanadaIA = 0
-        partidaPerdidaIA = 0
-        partidaGanadaIA = 0
-        puntosUser = 0
+        partidaPerdidaIA = juego[nomJugador].get('Partida Perdida IA', 0)
+        partidaGanadaIA = juego[nomJugador].get('Partida Ganada IA', 0)
+        puntosUser = juego[nomJugador].get('Puntos Usuario', 0)
         puntosIA = 0
         jugador = {
             'Nombre': nomJugador,
             'Nickname': '',
-            'Puntos': puntosUser,
+            'Puntos Usuario': puntosUser,
             'Partida Ganada IA': partidaGanadaIA,
             'Partida Perdida IA': partidaPerdidaIA
         }
         maquina = {
-            "Jugadores Perdieron": [],
-            "Puntos": puntosIA
+            "Jugadores Perdieron": juego.get("maquina",{}).get('Jugadores Perdieron',[]),
+            "Puntos IA": puntosIA
         }
         while (rondaGanadaUser < 3) and (rondaGanadaIA < 3):
             opciones = ("piedra", "papel", "tijera")
             jugadaUser = input('Ingrese su elección (piedra, papel o tijera): ').casefold()
+            c.borrarPantalla()
             if (jugadaUser in opciones):
                 jugadaIA = random.choice(opciones)
                 print (f'Usuario: {jugadaUser}')
@@ -55,22 +58,23 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                 elif (jugadaUser == "piedra" and jugadaIA == "tijera") or (jugadaUser == "tijera" and jugadaIA == "papel") or (jugadaUser == "papel" and jugadaIA == "piedra"):
                     print ('Sr Usuario ha GANADO')
                     puntosUser += 2
-                    jugador["Puntos"] = puntosUser
+                    jugador["Puntos Usuario"] = puntosUser
                     rondaGanadaUser += 1
                     print (f'Usuario {rondaGanadaUser} Máquina {rondaGanadaIA}')
                     if (rondaGanadaUser == 2):
                         print (f'{nomJugador} ha recibido un ESCUDO')
-                        if (rondaGanadaUser == 3):
-                            print (f'{nomJugador} ha GANADO el juego')
-                            partidaGanadaIA += 1
-                            jugador['Partida Ganada IA'] = partidaGanadaIA
-                            guardarJuego (juego,JUEGO_BASE)
-                            c.pausarPantalla()
-                            break
+                    if (rondaGanadaUser == 3):
+                        print (f'{nomJugador} ha GANADO el juego')
+                        partidaGanadaIA += 1
+                        jugador['Partida Ganada IA'] = partidaGanadaIA
+                        juego['jugador'] = jugador
+                        guardarJuego (juego,JUEGO_BASE)
+                        c.pausarPantalla()
+                        break
                 else: 
                     print (f'La máquina ha GANADO, {nomJugador} ha perdido')
                     puntosIA += 2
-                    maquina["Puntos"] = puntosIA
+                    maquina["Puntos IA"] = puntosIA
                     rondaGanadaIA += 1
                     print (f'Usuario {rondaGanadaUser} Máquina {rondaGanadaIA}')
                     if (rondaGanadaIA == 2):
@@ -79,13 +83,16 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                         print ("La maquina ha GANADO el juego")
                         partidaPerdidaIA += 1
                         jugador["Partida Perdida IA"] = partidaPerdidaIA
-                        nomJugador = nomJugador
-                        juego[nomJugador] = maquina
+                        maquina['Jugadores Perdieron'].append(nomJugador)
+                        
+                        juego[nomJugador] = jugador
+                        juego['maquina'] = maquina
+
                         print (f'El jugador {nomJugador} ha PERDIDO')
                         guardarJuego (juego,JUEGO_BASE)
                         c.pausarPantalla()
                         break
-                print (f'{nomJugador} ha conseguido {puntosUser} por ronda ganada.')
+                print (f'{nomJugador} ha conseguido {puntosUser} puntos por ronda ganada.')
                 print (f'Maquina ha conseguido {puntosIA} puntos por ronda ganada')
             else:
                 print ("Error en la opción seleccionada")
