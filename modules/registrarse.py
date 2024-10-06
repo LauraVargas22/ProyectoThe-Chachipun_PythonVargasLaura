@@ -28,10 +28,11 @@ def addJugadores (JUEGO_BASE: str):
         if (nomJugador in juego):
             print ("Ya se encuentra registrado")
             c.pausarPantalla()
+            continue
         else:
             nickname = input(f'Sr {nomJugador}, ingrese un nickname:\n ').casefold()
             if (nickname in juego):
-                print ("Nickname ocupado ingrese otro: ").casefold()
+                nickname = input("Nickname ocupado ingrese otro: ").casefold()
 
             jugador = {
                 'Nombre': nomJugador,
@@ -44,7 +45,7 @@ def addJugadores (JUEGO_BASE: str):
             }
             juego[nomJugador] = jugador
             juego[nickname] = nomJugador
+            print (f'Se ha registrado {nomJugador}, su nickname es {nickname}')
             guardarJuego (juego, JUEGO_BASE)
-            print (f'Se ha registrado a {nomJugador}, su nickname es {nickname}')
             c.pausarPantalla()
             isaddJugadores = s.validateData ('¿Desea salir del menú de registro S(Si) N(No)?')
