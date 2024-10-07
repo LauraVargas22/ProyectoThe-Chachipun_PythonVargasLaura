@@ -13,6 +13,7 @@ if (__name__=='__main__'):
     import modules.salir as s
     import modules.registrarse as re
     import modules.unovsmaquina as ia
+    import modules.unovsuno as uno
     isActive = True
     while (isActive):
         try:
@@ -42,7 +43,7 @@ if (__name__=='__main__'):
                             match opcMenu2:
                                 case 1:
                                     print (t.subtitle2)
-                                    #Uno versus uno
+                                    uno.unoVersusUno(JUEGO_BASE)
                                     c.pausarPantalla()
                                 case 2:
                                     print (t.subtitle3)

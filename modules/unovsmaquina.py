@@ -1,5 +1,5 @@
 '''
-Desarrolló del juego en el modo Uno versus Máquina
+Desarrollo del juego en el modo Uno versus Máquina
 '''
 import os
 import json
@@ -24,7 +24,7 @@ def UnoVersusMaquina (JUEGO_BASE:str):
     nomJugador = input("Sr. Jugador, ingrese su nombre: ").title()
     c.borrarPantalla()
     if (nomJugador not in juego):
-        print (f"El jugador {nomJugador} ingresado no ha sido registrado")
+        print (f"El jugador {nomJugador} no ha sido registrado")
         c.borrarPantalla()
     else:
         rondaGanadaUser = 0
