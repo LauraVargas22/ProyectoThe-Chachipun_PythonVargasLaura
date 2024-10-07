@@ -94,8 +94,8 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                         guardarJuego (juego,JUEGO_BASE)
                         c.pausarPantalla()
                         break
-                print (f'{nomJugador} ha conseguido {puntosUser} puntos por ronda ganada.')
-                print (f'Maquina ha conseguido {puntosIA} puntos por ronda ganada')
+                print (f'{nomJugador} ha conseguido {puntosUser} puntos por rondas ganadas.')
+                print (f'Maquina ha conseguido {puntosIA} puntos por rondas ganadas')
             else:
                 print ("Error en la opción seleccionada")
 

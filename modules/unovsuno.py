@@ -82,10 +82,22 @@ def unoVersusUno (JUEGO_BASE: str):
                         c.pausarPantalla()
                         break
                 else:
-                    print (f'')
-
-
-
-    
-
-   
+                    print (f'{nicknameJ2} ha GANADO')
+                    puntosUser2 += 2
+                    jugador2['Puntos Usuario'] = puntosUser2
+                    rondaGanadaUser2 += 1
+                    print (f'Jugador 1 {nicknameJ1}:{rondaGanadaUser1} Jugador 2 {nicknameJ2}:{rondaGanadaUser2}')
+                    if (rondaGanadaUser2 == 2):
+                        print (f'{nicknameJ2} ha recibido un ESCUDO')
+                    if (rondaGanadaUser2 == 3):
+                        print (f'{nicknameJ2} ha GANADO el juego')
+                        partidaGanadaUno2 += 1
+                        jugador2['Partida Ganada Uno'] = partidaGanadaUno2
+                        jugador1['Partida Perdida Uno'] = partidaPerdidaUno1
+                        guardarJuego(juego,JUEGO_BASE)
+                        c.pausarPantalla()
+                        break
+                print (f'{nicknameJ1} ha conseguido {puntosUser1} puntos por ronda ganadas')
+                print (f'{nicknameJ2} ha conseguido {puntosUser2} puntos por rondas ganadas')
+            else:
+                print ("Error en la opción seleccionada")
