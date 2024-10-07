@@ -1,12 +1,11 @@
 {
     "Laura Vargas": {
         "Nombre": "Laura Vargas",
-        "Nickname": "",
-        "Puntos Usuario": 6,
-        "Partida Ganada IA": 1,
+        "Nickname": "lau2209",
+        "Puntos Usuario": 12,
+        "Partida Ganada IA": 2,
         "Partida Perdida IA": 0
     },
-    "lau2209": "Laura Vargas",
     "Monica Rojas": {
         "Nombre": "Monica Rojas",
         "Nickname": "monis3010",
@@ -15,6 +14,5 @@
         "Partida Perdida IA": 0,
         "Partida Ganada Uno": 0,
         "Partida Perdida Uno": 0
-    },
-    "monis3010": "Monica Rojas"
+    }
 }
