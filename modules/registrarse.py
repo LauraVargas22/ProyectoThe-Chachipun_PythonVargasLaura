@@ -24,15 +24,15 @@ def addJugadores (JUEGO_BASE: str):
     isaddJugadores = True
     while (isaddJugadores):
         c.borrarPantalla()
-        nomJugador = input('Sr.Usuario, ingrese su nombre completo:\n ').title()
+        nomJugador = input('Sr.Usuario, ingrese su nombre completo:\n ').title().strip()
         if (nomJugador in juego):
             print ("Ya se encuentra registrado")
             c.pausarPantalla()
             continue
         else:
-            nickname = input(f'Sr {nomJugador}, ingrese un nickname:\n ').casefold()
+            nickname = input(f'Sr {nomJugador}, ingrese un nickname:\n ').casefold().strip()
             if (nickname in juego):
-                nickname = input("Nickname ocupado ingrese otro: ").casefold()
+                nickname = input("Nickname ocupado ingrese otro: ").casefold().strip()
 
             jugador = {
                 'Nombre': nomJugador,
@@ -44,7 +44,6 @@ def addJugadores (JUEGO_BASE: str):
                 'Partida Perdida Uno': 0
             }
             juego[nomJugador] = jugador
-            #juego[nickname] = nomJugador
             print (f'Se ha registrado {nomJugador}, su nickname es {nickname}')
             guardarJuego (juego, JUEGO_BASE)
             c.pausarPantalla()

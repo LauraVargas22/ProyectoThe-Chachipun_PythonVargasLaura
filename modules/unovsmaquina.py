@@ -41,7 +41,9 @@ def UnoVersusMaquina (JUEGO_BASE:str):
         'Nickname': juego[nomJugador].get('Nickname', ''),
         'Puntos Usuario': puntosUser,
         'Partida Ganada IA': partidaGanadaIA,
-        'Partida Perdida IA': partidaPerdidaIA
+        'Partida Perdida IA': partidaPerdidaIA,
+        'Partida Ganada Uno': 0,
+        'Partida Perdida Uno': 0
     }
     maquina = {
         "Jugadores Perdieron": juego.get("maquina",{}).get('Jugadores Perdieron',[]),
