@@ -44,6 +44,7 @@ def addJugadores (JUEGO_BASE: str):
                 'Partida Perdida Uno': 0
             }
             juego[nomJugador] = jugador
+            juego[nickname] = jugador
             print (f'Se ha registrado {nomJugador}, su nickname es {nickname}')
             guardarJuego (juego, JUEGO_BASE)
             c.pausarPantalla()

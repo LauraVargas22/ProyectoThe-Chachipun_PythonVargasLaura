@@ -35,7 +35,7 @@ def UnoVersusMaquina (JUEGO_BASE:str):
     partidaPerdidaIA = juego[nomJugador].get('Partida Perdida IA', 0)
     partidaGanadaIA = juego[nomJugador].get('Partida Ganada IA', 0)
     puntosUser = juego[nomJugador].get('Puntos Usuario', 0)
-    partidaJugada = juego.get('Partidas Jugadas', 0)
+    partidaJugada = juego.get('maquina',{}).get('Partidas Jugadas', 0)
     puntosIA = 0
     #Formato de diccionario del jugador y máquina
     jugador = {
@@ -85,6 +85,7 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                     else:
                         print (f'{nomJugador} le ha ganado a la máquina nuevamente')
                     juego[nomJugador] = jugador
+                    juego['maquina'] = maquina
                     guardarJuego (juego,JUEGO_BASE)
                     c.pausarPantalla()
                     break

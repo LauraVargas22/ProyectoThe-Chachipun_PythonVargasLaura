@@ -30,9 +30,9 @@ def unoVersusUno (JUEGO_BASE: str):
         jugador2 = None
         #Buscar nickname en cada jugador que esté registrado
         for jugador, datos in juego.items():
-            if datos['Nickname'] == nicknameJ1:
+            if datos.get('Nickname') == nicknameJ1:
                 jugador1 = jugador
-            if datos['Nickname'] == nicknameJ2:
+            if datos.get('Nickname') == nicknameJ2:
                 jugador2 = jugador
         #Continua el juego si ambos están registrados
         if (jugador1) and (jugador2):
@@ -47,12 +47,12 @@ def unoVersusUno (JUEGO_BASE: str):
     #Inicialización variables
     rondaGanadaUser1 = 0
     rondaGanadaUser2 = 0
-    partidaGanadaUno1 = juego[jugador1].get('Partida Ganada Uno',0)
-    partidaPerdidaUno1 = juego[jugador1].get('Partida Perdida Uno', 0)
-    puntosUser1 =juego[jugador1].get('Puntos Usuario',0)
-    partidaGanadaUno2 = juego[jugador2].get('Partida Ganada Uno',0)
-    partidaPerdidaUno2 = juego[jugador2].get('Partida Perdida Uno', 0)
-    puntosUser2 =juego[jugador2].get('Puntos Usuario',0)
+    partidaGanadaUno1 = juego.get('jugador',{}).get('Partida Ganada Uno',0)
+    partidaPerdidaUno1 = juego.get('jugador',{}).get('Partida Perdida Uno', 0)
+    puntosUser1 =juego.get('jugador',{}).get('Puntos Usuario',0)
+    partidaGanadaUno2 = juego.get('jugador',{}).get('Partida Ganada Uno',0)
+    partidaPerdidaUno2 = juego.get('jugador',{}).get('Partida Perdida Uno', 0)
+    puntosUser2 =juego.get('jugador',{}).get('Puntos Usuario',0)
     #Bucle para determinar fin del juego al tener 3 partidas ganadas uno de los jugadores.
     while (rondaGanadaUser1 < 3) and (rondaGanadaUser2 < 3):
         #Ingreso de opciones a jugar
@@ -75,7 +75,7 @@ def unoVersusUno (JUEGO_BASE: str):
                 print (f'Jugador 1 {nicknameJ1}:{rondaGanadaUser1} Jugador 2 {nicknameJ2}:{rondaGanadaUser2}') #Marcador
                 if (rondaGanadaUser1 == 2): #Otorgar escudo jugador 1
                     print (f'{nicknameJ1} ha recibido un ESCUDO')
-                if (rondaGanadaUser2 == 3): #Si gana el jugador 1
+                if (rondaGanadaUser1 == 3): #Si gana el jugador 1
                     print (f'{nicknameJ1} ha GANADO el juego')
                     partidaGanadaUno1 += 1 #Sumar partida ganada jugador 1
                     juego[jugador1]['Partida Ganada Uno'] = partidaGanadaUno1

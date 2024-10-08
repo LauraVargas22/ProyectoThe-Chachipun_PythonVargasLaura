@@ -6,14 +6,78 @@
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 1,
         "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 1
+    },
+    "Valentina Caballero": {
+        "Nombre": "Valentina Caballero",
+        "Nickname": "valentina15",
+        "Puntos Usuario": 6,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 1,
+        "Partida Ganada Uno": 1,
         "Partida Perdida Uno": 0
     },
     "maquina": {
         "Jugadores Perdieron": [
-            "Laura Vargas"
+            "Laura Vargas",
+            "Valentina Caballero"
         ],
         "Jugadores Ganaron": [],
-        "Partidas Jugadas": 1,
+        "Partidas Jugadas": 2,
         "Puntos IA": 6
+    },
+    "Monis": {
+        "Nombre": "Monis",
+        "Nickname": "valentina15",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "Laura Rojas": {
+        "Nombre": "Laura Rojas",
+        "Nickname": "lau2209",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "Miguel Duran": {
+        "Nombre": "Miguel Duran",
+        "Nickname": "miguel17",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "miguel17": {
+        "Nombre": "Miguel Duran",
+        "Nickname": "miguel17",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "lau2209": {
+        "Nombre": "Laura Martinez",
+        "Nickname": "lau2209",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "Laura Martinez": {
+        "Nombre": "Laura Martinez",
+        "Nickname": "lau2209",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
     }
 }
