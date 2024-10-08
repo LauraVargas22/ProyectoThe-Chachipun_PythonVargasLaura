@@ -14,6 +14,7 @@ if (__name__=='__main__'):
     import modules.registrarse as re
     import modules.unovsmaquina as ia
     import modules.unovsuno as uno
+    import modules.estadisticas as es
     isActive = True
     while (isActive):
         try:
@@ -55,7 +56,7 @@ if (__name__=='__main__'):
                                     print (msg.msgCase)
                                     c.pausarPantalla()
                 case 3:
-                    pass #Estadísticas
+                    es.estadisticas(JUEGO_BASE)
                 case 4:
                     isActive = s.validateData(msg.msgInfo)
                 case _:

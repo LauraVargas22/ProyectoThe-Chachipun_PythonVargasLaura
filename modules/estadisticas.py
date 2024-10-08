@@ -17,4 +17,11 @@ def guardarJuego (juego: dict, JUEGO_BASE: str):
         json.dump(juego, file, indent=4)
 
 def estadisticas (JUEGO_BASE: str):
-    pass
+    juego = cargarJuego(JUEGO_BASE)
+
+    puntosPorJugador = {}
+
+    print ("        PODIO JUGADORES        ")
+    for jugador in juego.items():
+        for nomJugador, puntosUser in puntosPorJugador.items():
+            print (f'{nomJugador}: {puntosUser}')
