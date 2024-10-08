@@ -47,6 +47,7 @@ def UnoVersusMaquina (JUEGO_BASE:str):
     }
     maquina = {
         "Jugadores Perdieron": juego.get("maquina",{}).get('Jugadores Perdieron',[]),
+        "Jugadores Ganaron": juego.get("maquina",{}).get('Jugadores Ganaron',[]),
         "Puntos IA": puntosIA
     }
     while (rondaGanadaUser < 3) and (rondaGanadaIA < 3):
@@ -72,6 +73,10 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                     print (f'{nomJugador} ha GANADO el juego')
                     partidaGanadaIA += 1
                     jugador['Partida Ganada IA'] = partidaGanadaIA
+                    if nomJugador not in maquina['Jugadores Ganaron']:
+                        maquina['Jugadores Ganaron'].append(nomJugador)
+                    else:
+                        print (f'{nomJugador} le ha ganado a la máquina nuevamente')
                     juego[nomJugador] = jugador
                     guardarJuego (juego,JUEGO_BASE)
                     c.pausarPantalla()
@@ -88,11 +93,8 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                     print ("La maquina ha GANADO el juego")
                     partidaPerdidaIA += 1
                     jugador["Partida Perdida IA"] = partidaPerdidaIA
-                    if nomJugador not in maquina["Jugadores Perdieron"]:
-                        maquina['Jugadores Perdieron'].append(nomJugador)
-                        print (f'El jugador {nomJugador} ha PERDIDO') 
-                    else:
-                        print (f'{nomJugador}, la máquina le ha ganado nuevamente')
+                    maquina['Jugadores Perdieron'].append(nomJugador)
+                    print (f'El jugador {nomJugador} ha PERDIDO') 
 
                     juego[nomJugador] = jugador
                     juego['maquina'] = maquina

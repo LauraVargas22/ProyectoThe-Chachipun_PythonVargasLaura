@@ -1,26 +1,18 @@
 {
-    "Monica Rojas": {
-        "Nombre": "Monica Rojas",
-        "Nickname": "monis3010",
-        "Puntos Usuario": 2,
+    "Laura Vargas": {
+        "Nombre": "Laura Vargas",
+        "Nickname": "lau2209",
+        "Puntos Usuario": 4,
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 1,
         "Partida Ganada Uno": 0,
         "Partida Perdida Uno": 0
     },
-    "Laura Vargas ": {
-        "Nombre": "Laura Vargas ",
-        "Nickname": "lau2209",
-        "Puntos Usuario": 12,
-        "Partida Ganada IA": 1,
-        "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
-    },
     "maquina": {
         "Jugadores Perdieron": [
-            "Monica Rojas"
+            "Laura Vargas"
         ],
+        "Jugadores Ganaron": [],
         "Puntos IA": 6
     }
 }
