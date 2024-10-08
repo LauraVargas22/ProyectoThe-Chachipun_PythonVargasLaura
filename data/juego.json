@@ -8,11 +8,30 @@
         "Partida Ganada Uno": 0,
         "Partida Perdida Uno": 0
     },
+    "Isabella Galvis": {
+        "Nombre": "Isabella Galvis",
+        "Nickname": "isa04",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "Valentina Caballero": {
+        "Nombre": "Valentina Caballero",
+        "Nickname": "valentina15",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
     "maquina": {
         "Jugadores Perdieron": [
             "Laura Vargas"
         ],
         "Jugadores Ganaron": [],
+        "Partidas Jugadas": 9,
         "Puntos IA": 6
     }
 }

@@ -19,10 +19,32 @@ def guardarJuego (juego: dict, JUEGO_BASE: str):
 def estadisticas (JUEGO_BASE: str):
     juego = cargarJuego(JUEGO_BASE)
 
-    puntosPorJugador = {}
+    print ("    JUGADORES QUE HAN PERDIDO CONTRA LA IA    ")
+    jugadoresPerdieron = juego.get("maquina",{}).get('Jugadores Perdieron',[])
+    contarjP = {}
+    for jugador in jugadoresPerdieron:
+        if jugador in contarjP: 
+            contarjP[jugador] += 1
+        else: 
+            contarjP[jugador] = 1
+    maxPerdidas = 0
+    maxVecesP = None
+    for jugador, frecuencia in contarjP.items():
+        if frecuencia > maxPerdidas:
+            maxPerdidas = frecuencia
+            maxVecesP = jugador
+    
+    if (maxVecesP):
+        print (f'El jugador que más ha perdido es: {maxVecesP} con {maxPerdidas}')
+    else:
+        print (f'Ningún jugador ha perdido contra la máquina')
 
-    print ("        PODIO JUGADORES        ")
-    for jugador in juego.items():
-        jugador = [(jugador,datos) for jugador, datos in juego.items()]
-        for nomJugador, puntosUser in puntosPorJugador.items():
-            print (f'{nomJugador}: {puntosUser}')
+    print ("        JUGADORES QUE HAN GANADO CONTRA LA IA        ")
+'''
+    jugadoresGanaron = juego.get("maquina",{}).get('Jugadores Ganaron',[])
+    jugadoresGanaron = len(maquina["Jugadores Ganaron"])
+    print (jugadoresGanaron)
+    
+    promedioGanaron = jugadoresGanaron/partidasjugadas
+    print (f'El promedio de jugadores que han ganado contra la IA es {promedioGanaron})'''
+

@@ -35,6 +35,7 @@ def UnoVersusMaquina (JUEGO_BASE:str):
     partidaPerdidaIA = juego[nomJugador].get('Partida Perdida IA', 0)
     partidaGanadaIA = juego[nomJugador].get('Partida Ganada IA', 0)
     puntosUser = juego[nomJugador].get('Puntos Usuario', 0)
+    partidaJugada = juego.get('Partidas Jugadas', 0)
     puntosIA = 0
     #Formato de diccionario del jugador y máquina
     jugador = {
@@ -49,6 +50,7 @@ def UnoVersusMaquina (JUEGO_BASE:str):
     maquina = {
         "Jugadores Perdieron": juego.get("maquina",{}).get('Jugadores Perdieron',[]),
         "Jugadores Ganaron": juego.get("maquina",{}).get('Jugadores Ganaron',[]),
+        "Partidas Jugadas": partidaJugada,
         "Puntos IA": puntosIA
     }
     #Bucle para determinar 3 partidas ganadas por maquina o jugador.
@@ -104,6 +106,8 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                     guardarJuego (juego,JUEGO_BASE)
                     c.pausarPantalla()
                     break
+            partidaJugada += 1
+            maquina['Partidas Jugadas'] = partidaJugada
             #Puntos de jugador y máquina
             print (f'{nomJugador} ha conseguido {puntosUser} puntos por rondas ganadas.') 
             print (f'Maquina ha conseguido {puntosIA} puntos por rondas ganadas')
