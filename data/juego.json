@@ -2,27 +2,9 @@
     "Laura Vargas": {
         "Nombre": "Laura Vargas",
         "Nickname": "lau2209",
-        "Puntos Usuario": 4,
+        "Puntos Usuario": 2,
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 1,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
-    },
-    "Isabella Galvis": {
-        "Nombre": "Isabella Galvis",
-        "Nickname": "isa04",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
-        "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
-    },
-    "Valentina Caballero": {
-        "Nombre": "Valentina Caballero",
-        "Nickname": "valentina15",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
-        "Partida Perdida IA": 0,
         "Partida Ganada Uno": 0,
         "Partida Perdida Uno": 0
     },
@@ -31,7 +13,7 @@
             "Laura Vargas"
         ],
         "Jugadores Ganaron": [],
-        "Partidas Jugadas": 9,
+        "Partidas Jugadas": 1,
         "Puntos IA": 6
     }
 }

@@ -53,6 +53,8 @@ def UnoVersusMaquina (JUEGO_BASE:str):
         "Partidas Jugadas": partidaJugada,
         "Puntos IA": puntosIA
     }
+    partidaJugada += 1
+    maquina['Partidas Jugadas'] = partidaJugada
     #Bucle para determinar 3 partidas ganadas por maquina o jugador.
     while (rondaGanadaUser < 3) and (rondaGanadaIA < 3):
         opciones = ("piedra", "papel", "tijera")
@@ -106,8 +108,6 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                     guardarJuego (juego,JUEGO_BASE)
                     c.pausarPantalla()
                     break
-            partidaJugada += 1
-            maquina['Partidas Jugadas'] = partidaJugada
             #Puntos de jugador y máquina
             print (f'{nomJugador} ha conseguido {puntosUser} puntos por rondas ganadas.') 
             print (f'Maquina ha conseguido {puntosIA} puntos por rondas ganadas')
