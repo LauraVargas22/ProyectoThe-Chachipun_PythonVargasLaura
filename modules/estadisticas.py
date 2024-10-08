@@ -23,5 +23,6 @@ def estadisticas (JUEGO_BASE: str):
 
     print ("        PODIO JUGADORES        ")
     for jugador in juego.items():
+        jugador = [(jugador,datos) for jugador, datos in juego.items()]
         for nomJugador, puntosUser in puntosPorJugador.items():
             print (f'{nomJugador}: {puntosUser}')
