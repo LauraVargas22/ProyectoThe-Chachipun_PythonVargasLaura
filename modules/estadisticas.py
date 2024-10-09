@@ -19,23 +19,25 @@ def guardarJuego (juego: dict, JUEGO_BASE: str):
 
 def estadisticas (JUEGO_BASE: str):
     juego = cargarJuego(JUEGO_BASE)
-
-    nomJugador = juego.get("jugador",{}).get('Nombre', '')
-    puntosUser = juego.get("jugador",{}).get('Puntos Usuario', '')
-
-    listPodio = list(nomJugador,puntosUser)
-
-    print (listPodio)
-
-
+    #Inicializar lista de podio
+    listaPodio = []
+    #Recorrer cada jugador resgistrado en juego
+    for jugador, datos in juego.items():
+        #Obtener el nombre y los puntos de cada uno
+        nomJugador = datos.get('Nombre','')
+        puntosUser = datos.get('Puntos Usuario',0)
+        #Añadir los datos obtenido anteriormente a la lista inicializada
+        listaPodio.append([nomJugador,puntosUser])
+    #Ordenar la lista creada en orden descendente
+    listaPodio.sort(key=lambda x: x[1], reverse = True) #x toma el valor del primer elemento y x[1] el segundo de cada sublista
+    #Imprimir el podio de los jugadores de acuerdo a su posición en la lista
     print ("        PODIO JUGADORES        ")
-
-
-
+    print (f'Jugador 1: {listaPodio[0]}')
+    print (f'Jugador 2: {listaPodio[1]}')
+    print (f'Jugador 3: {listaPodio[3]}')
+    #Imprimir el último jugador de acuerdo a la última posición
     print ("        ÚLTIMO RANKING        ")
-
-
-    
+    print (f'Último Jugador: {listaPodio[-1]}')
 
     print ("    JUGADORES QUE HAN PERDIDO CONTRA LA MÁQUINA    ")
     jugadoresPerdieron = juego.get("maquina",{}).get('Jugadores Perdieron',[]) #Obtener lista de jugadores que perdieron
@@ -71,13 +73,11 @@ def estadisticas (JUEGO_BASE: str):
     jugadoresGanaron = juego.get("maquina",{}).get('Jugadores Ganaron',[])
     numGanadores = len(jugadoresGanaron)
     print (jugadoresGanaron)
-
     partidasJugadas = maquina.get("Partidas Jugadas", 0)
-    
-    if (partidasJugadas > 0):
+    if (numGanadores > 0):
         promedioGanaron = (numGanadores/partidasJugadas) #Operación para determinar el promedio
-        print (f'El promedio de jugadores que han ganado contra la IA es {promedioGanaron}')
+        print (f'El promedio de jugadores que han ganado contra la máquina es {promedioGanaron}')
     else:
-        print ("No se ha jugado en contra de la máquina")
+        print ("No le han ganada a la máquina")
 
     c.pausarPantalla()

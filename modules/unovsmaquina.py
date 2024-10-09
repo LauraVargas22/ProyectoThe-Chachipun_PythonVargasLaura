@@ -23,24 +23,24 @@ def UnoVersusMaquina (JUEGO_BASE:str):
     print ('Sr.Jugador usted se enfrentará a nuestra maquina')
     isPlayMaquina = True
     while (isPlayMaquina):
-        nomJugador = input("Sr. Jugador, ingrese su nombre: ").title() #Verificar el nombre del jugador
-        if (nomJugador in juego):
+        nickname = input("Sr. Jugador, ingrese su nickname: ").casefold().strip() #Verificar el nombre del jugador
+        if (nickname in juego):
             break
         else:
-            print (f"El jugador {nomJugador} no ha sido registrado. Inténtelo de nuevo.")
+            print (f"El jugador {nickname} no ha sido registrado. Inténtelo de nuevo.")
             c.pausarPantalla()
     #Inicialización de datos necesarios para el desarrollo del juego
     rondaGanadaUser = 0
     rondaGanadaIA = 0
-    partidaPerdidaIA = juego[nomJugador].get('Partida Perdida IA', 0)
-    partidaGanadaIA = juego[nomJugador].get('Partida Ganada IA', 0)
-    puntosUser = juego[nomJugador].get('Puntos Usuario', 0)
+    partidaPerdidaIA = juego.get("jugador",{}).get('Partida Perdida IA', 0)
+    partidaGanadaIA = juego.get("jugador",{}).get('Partida Ganada IA', 0)
+    puntosUser = juego.get("jugador",{}).get('Puntos Usuario', 0)
     partidaJugada = juego.get('maquina',{}).get('Partidas Jugadas', 0)
     puntosIA = 0
     #Formato de diccionario del jugador y máquina
     jugador = {
-        'Nombre': nomJugador,
-        'Nickname': juego[nomJugador].get('Nickname', ''),
+        'Nombre': juego[nickname].get('Nombre', ''),
+        'Nickname': nickname,
         'Puntos Usuario': puntosUser,
         'Partida Ganada IA': partidaGanadaIA,
         'Partida Perdida IA': partidaPerdidaIA,
@@ -75,22 +75,22 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                 rondaGanadaUser += 1 #Sumar ronda ganada
                 print (f'Usuario {rondaGanadaUser} Máquina {rondaGanadaIA}') #Marcador
                 if (rondaGanadaUser == 2): #Escudo al tener dos rondas ganadas
-                    print (f'{nomJugador} ha recibido un ESCUDO')
+                    print (f'{nickname} ha recibido un ESCUDO')
                 if (rondaGanadaUser == 3): #Juego ganado
-                    print (f'{nomJugador} ha GANADO el juego')
+                    print (f'{nickname} ha GANADO el juego')
                     partidaGanadaIA += 1 #Sumar partida ganada
                     jugador['Partida Ganada IA'] = partidaGanadaIA
-                    if nomJugador not in maquina['Jugadores Ganaron']:
-                        maquina['Jugadores Ganaron'].append(nomJugador) #Agregar el nombre del jugador en la lista
+                    if nickname not in maquina['Jugadores Ganaron']:
+                        maquina['Jugadores Ganaron'].append(nickname) #Agregar el nombre del jugador en la lista
                     else:
-                        print (f'{nomJugador} le ha ganado a la máquina nuevamente')
-                    juego[nomJugador] = jugador
+                        print (f'{nickname} le ha ganado a la máquina nuevamente')
+                    juego[nickname] = jugador
                     juego['maquina'] = maquina
                     guardarJuego (juego,JUEGO_BASE)
                     c.pausarPantalla()
                     break
             else: #Parámetros del juego en caso de ganar la máquina
-                print (f'La máquina ha GANADO, {nomJugador} ha perdido')
+                print (f'La máquina ha GANADO, {nickname} ha perdido')
                 puntosIA += 2 #Sumar puntos máquina
                 maquina["Puntos IA"] = puntosIA
                 rondaGanadaIA += 1 #Sumar ronda ganada máquina
@@ -101,16 +101,16 @@ def UnoVersusMaquina (JUEGO_BASE:str):
                     print ("La maquina ha GANADO el juego")
                     partidaPerdidaIA += 1 #Sumar partida perdida
                     jugador["Partida Perdida IA"] = partidaPerdidaIA
-                    maquina['Jugadores Perdieron'].append(nomJugador) #Agregar eñ nombre del jugador en la lista
-                    print (f'El jugador {nomJugador} ha PERDIDO') 
+                    maquina['Jugadores Perdieron'].append(nickname) #Agregar eñ nombre del jugador en la lista
+                    print (f'El jugador {nickname} ha PERDIDO') 
 
-                    juego[nomJugador] = jugador
+                    juego[nickname] = jugador
                     juego['maquina'] = maquina
                     guardarJuego (juego,JUEGO_BASE)
                     c.pausarPantalla()
                     break
             #Puntos de jugador y máquina
-            print (f'{nomJugador} ha conseguido {puntosUser} puntos por rondas ganadas.') 
+            print (f'{nickname} ha conseguido {puntosUser} puntos por rondas ganadas.') 
             print (f'Maquina ha conseguido {puntosIA} puntos por rondas ganadas')
         else:
             print ("Error en la opción seleccionada")

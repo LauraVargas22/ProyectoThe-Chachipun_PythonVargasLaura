@@ -25,7 +25,7 @@ def addJugadores (JUEGO_BASE: str):
     while (isaddJugadores):
         c.borrarPantalla()
         nomJugador = input('Sr.Usuario, ingrese su nombre completo:\n ').title().strip() #Registrar nombre de jugador, validando mayúsculas en iniciales y espacios de inicio y fin
-        if (nomJugador in juego):
+        if any(jugador['Nombre'] == nomJugador for jugador in juego.values()):
             print ("Ya se encuentra registrado") 
             c.pausarPantalla()
             continue
@@ -43,7 +43,6 @@ def addJugadores (JUEGO_BASE: str):
                 'Partida Ganada Uno': 0,
                 'Partida Perdida Uno': 0
             }
-            juego[nomJugador] = jugador
             juego[nickname] = jugador
             print (f'Se ha registrado {nomJugador}, su nickname es {nickname}')
             guardarJuego (juego, JUEGO_BASE)

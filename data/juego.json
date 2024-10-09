@@ -1,83 +1,50 @@
 {
-    "Laura Vargas": {
+    "lau2209": {
         "Nombre": "Laura Vargas",
         "Nickname": "lau2209",
+        "Puntos Usuario": 4,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 1,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "isa04": {
+        "Nombre": "Isabela Galvis",
+        "Nickname": "isa04",
         "Puntos Usuario": 2,
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 1,
         "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 1
+        "Partida Perdida Uno": 0
     },
-    "Valentina Caballero": {
+    "valentina15": {
         "Nombre": "Valentina Caballero",
         "Nickname": "valentina15",
         "Puntos Usuario": 6,
+        "Partida Ganada IA": 1,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "omar13": {
+        "Nombre": "Omar Cardona",
+        "Nickname": "omar13",
+        "Puntos Usuario": 2,
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 1,
-        "Partida Ganada Uno": 1,
+        "Partida Ganada Uno": 0,
         "Partida Perdida Uno": 0
     },
     "maquina": {
         "Jugadores Perdieron": [
-            "Laura Vargas",
-            "Valentina Caballero"
+            "omar13",
+            "lau2209",
+            "isa04"
         ],
-        "Jugadores Ganaron": [],
-        "Partidas Jugadas": 2,
+        "Jugadores Ganaron": [
+            "valentina15"
+        ],
+        "Partidas Jugadas": 4,
         "Puntos IA": 6
-    },
-    "Monis": {
-        "Nombre": "Monis",
-        "Nickname": "valentina15",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
-        "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
-    },
-    "Laura Rojas": {
-        "Nombre": "Laura Rojas",
-        "Nickname": "lau2209",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
-        "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
-    },
-    "Miguel Duran": {
-        "Nombre": "Miguel Duran",
-        "Nickname": "miguel17",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
-        "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
-    },
-    "miguel17": {
-        "Nombre": "Miguel Duran",
-        "Nickname": "miguel17",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
-        "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
-    },
-    "lau2209": {
-        "Nombre": "Laura Martinez",
-        "Nickname": "lau2209",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
-        "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
-    },
-    "Laura Martinez": {
-        "Nombre": "Laura Martinez",
-        "Nickname": "lau2209",
-        "Puntos Usuario": 0,
-        "Partida Ganada IA": 0,
-        "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
     }
 }
