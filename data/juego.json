@@ -50,10 +50,10 @@
     "diego14": {
         "Nombre": "Diego Mendoza",
         "Nickname": "diego14",
-        "Puntos Usuario": 0,
+        "Puntos Usuario": 6,
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
+        "Partida Ganada Uno": 1,
         "Partida Perdida Uno": 0
     },
     "diego1345": {
@@ -63,25 +63,25 @@
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 0,
         "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
+        "Partida Perdida Uno": 1
     },
     "andy03": {
         "Nombre": "Andres Gonzalez",
         "Nickname": "andy03",
-        "Puntos Usuario": 0,
+        "Puntos Usuario": 6,
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 0,
-        "Partida Ganada Uno": 0,
+        "Partida Ganada Uno": 1,
         "Partida Perdida Uno": 0
     },
     "zara05": {
         "Nombre": "Zaray Estevez",
         "Nickname": "zara05",
-        "Puntos Usuario": 0,
+        "Puntos Usuario": 4,
         "Partida Ganada IA": 0,
         "Partida Perdida IA": 0,
         "Partida Ganada Uno": 0,
-        "Partida Perdida Uno": 0
+        "Partida Perdida Uno": 1
     },
     "carmen10": {
         "Nombre": "Carmen Diaz",

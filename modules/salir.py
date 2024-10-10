@@ -9,7 +9,7 @@ def validateData (message:str):
     accion = input (f'{message}').upper()
     if (accion not in opciones):
         print ('La opción ingresada no es válida...')
-        validateData()
+        validateData(message)
     elif (accion == 'N'):
         flagFunction = True
     elif ((accion) == 'S'):
