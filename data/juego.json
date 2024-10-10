@@ -46,5 +46,68 @@
         ],
         "Partidas Jugadas": 4,
         "Puntos IA": 6
+    },
+    "diego14": {
+        "Nombre": "Diego Mendoza",
+        "Nickname": "diego14",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "diego1345": {
+        "Nombre": "Diego Tarazona",
+        "Nickname": "diego1345",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "andy03": {
+        "Nombre": "Andres Gonzalez",
+        "Nickname": "andy03",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "zara05": {
+        "Nombre": "Zaray Estevez",
+        "Nickname": "zara05",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "carmen10": {
+        "Nombre": "Carmen Diaz",
+        "Nickname": "carmen10",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "carmen123": {
+        "Nombre": "Carmen Diaz",
+        "Nickname": "carmen123",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
+    },
+    "santi08": {
+        "Nombre": "Santiago Alarcon",
+        "Nickname": "santi08",
+        "Puntos Usuario": 0,
+        "Partida Ganada IA": 0,
+        "Partida Perdida IA": 0,
+        "Partida Ganada Uno": 0,
+        "Partida Perdida Uno": 0
     }
 }

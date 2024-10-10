@@ -24,10 +24,10 @@ def estadisticas (JUEGO_BASE: str):
     #Recorrer cada jugador resgistrado en juego
     for jugador, datos in juego.items():
         #Obtener el nombre y los puntos de cada uno
-        nomJugador = datos.get('Nombre','')
+        nickname = datos.get('Nickname','')
         puntosUser = datos.get('Puntos Usuario',0)
         #Añadir los datos obtenido anteriormente a la lista inicializada
-        listaPodio.append([nomJugador,puntosUser])
+        listaPodio.append([nickname,puntosUser])
     #Ordenar la lista creada en orden descendente
     listaPodio.sort(key=lambda x: x[1], reverse = True) #x toma el valor del primer elemento y x[1] el segundo de cada sublista
     #Imprimir el podio de los jugadores de acuerdo a su posición en la lista
