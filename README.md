@@ -1,4 +1,4 @@
-PROYECTO PYTHON "Juego The Chachipun"
+# PROYECTO PYTHON "Juego The Chachipun"
 En esté proyecto se desarrollará el juego "The Chachipun" más conocido con piedra, papel o tijéra, el cual tiene bastantes beneficios, puesto que la toma de decisiones rápidas es esencial para el desarrollo del mismo.
 Para lo cual se va a ejecutar un menú con opciones, las cuales son: 
 1. Registro
